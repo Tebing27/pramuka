@@ -5,8 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="shortcut icon" href="assets/logo.jpg" type="image/x-icon">
+        
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <link rel="stylesheet" href="assets/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/mixitup@3.3.1/dist/mixitup.min.js"></script>
 
         <title>GERAKAN PRAMUKA SMA NEGERI 49 JAKARTA</title>
     </head>
@@ -19,26 +26,31 @@
                     <img src="assets/logo.jpg" alt="" class="nav__logo-img">
                     GERAKAN PRAMUKA SMA NEGERI 49 JAKARTA <br> 09.215/09.216
                 </a>
-
+                
                 <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">Home</a>
-                        </li>
+                  <ul class="nav__list">
+                      <li class="nav__item">
+                          <a href="#home" class="nav__link active-link">Beranda</a>
+                      </li>
 
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">About</a>
-                        </li>
+                      <li class="nav__item">
+                          <a href="#about" class="nav__link">Tentang Kami</a>
+                      </li>
+
+                  <div class="nav__close" id="nav-close">
+                      <i class='bx bx-x'></i>
+                  </div>
+              </div>
+
+              <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-grid-alt'></i>
+              </div>
             </nav>
         </header>
 
         <main class="main">
             <!--==================== HOME ====================-->
-            <section class="home container" id="home">
-                <div class="swiper home-swiper">
-                    <div class="swiper-wrapper">
-                      
-                        <section class="swiper-slide">
+            <section class="home" id="home">
                             <div class="home__content">
                                 <div class="home__group">
                                 <div class="home__data">
@@ -50,135 +62,165 @@
                                 </div>
                             </div>
                         </section>
-
+                        
+            <!--==================== SPONSOR ================-->
+            <section class="customer-logos slider container">
+            <div class="slide"><img src="images/adidas.png" alt="logo"></div>
+            <div class="slide"><img src="images/facebook.png" alt="logo"></div>
+            <div class="slide"><img src="images/google.png" alt="logo"></div>
+            <div class="slide"><img src="images/instagram.png" alt="logo"></div>
+            <div class="slide"><img src="images/nike.png" alt="logo"></div>
+            <div class="slide"><img src="images/twitter.png" alt="logo"></div>
+            <div class="slide"><img src="images/uber.png" alt="logo"></div>
+            <div class="slide"><img src="images/youtube.png" alt="logo"></div>
+            </section>
             <!--==================== ABOUT ====================-->
             <section class="section about" id="about">
                 <div class="about__container container">
                     <div class="about__data">
-                        <h2 class="section__title about__title center-title">Tentang Saya</h2>
+                        <h2 class="section__title about__title center-title">Tentang Kami</h2>
                         </div>
-                        <div class="img-slider card__article">
-                            <div class="slide">
+                        <div class="work__filters">
+                          <span class="work__item active-work" data-filter='all'>All</span>
+                          <span class="work__item" data-filter='.latin'>Latihan Rutin</span>
+                          <span class="work__item" data-filter='.pta'>Pelantikan Tamu Ambalan</span>
+                          <span class="work__item" data-filter='.bantara'>Pelantikan Bantara</span>
+                          <span class="work__item" data-filter='.musyawarah'>Pelantikan dan Musyawarah</span>
+                      </div>
+                        <div class="cards">
+                          <div class="card mix latin">
                               <img src="assets/Latrutin/gambar.jpg" alt="Latihan Rutin">
-                              <div class="card__data">
-                                <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                <h2 class="card__title">Latihan Rutin</h2>
-                                <span class="card__description">09.215/09.216</span>
-                             </div>
-                            </div>
-                            <div class="slide">
-                              <img src="assets/Latrutin/gambar1.jpeg" alt="Latihan Rutin">
-                              <div class="card__data">
-                                <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                <h2 class="card__title">Latihan Rutin</h2>
-                                <span class="card__description">09.215/09.216</span>
-                             </div>
-                            </div>
+                              <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                              <p>09.215/09.216</p>
+                          </div>
 
-                            <div class="slide">
-                                <img src="assets/PelantikanBantara/gambar.png" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">Pelantikan Bantara</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-                              <div class="slide">
+                          <div class="card mix pta">
+                            <img src="assets/PTA/gambar.JPG" alt="PTA">
+                            <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                            <p>09.215/09.216</p>
+                        </div>
+
+                        <div class="card mix latin">
+                          <img src="assets/Latrutin/gambar1.jpeg" alt="Latihan Rutin">
+                          <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                          <p>09.215/09.216</p>
+                      </div>
+
+                      <div class="card mix pta">
+                        <img src="assets/PTA/gambar1.JPG" alt="PTA">
+                        <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                        <p>09.215/09.216</p>
+                    </div>
+
+                    <div class="card mix musyawarah">
+                      <img src="assets/PelantikandanMusyawarah/gambar1.jpeg" alt="Pelantikan dan Musyawarah">
+                      <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                      <p>09.215/09.216</p>
+                  </div>
+                          <div class="card mix musyawarah">
+                              <img src="assets/PelantikandanMusyawarah/gambar.png" alt="Pelantikan dan Musyawarah">
+                              <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                      <p>09.215/09.216</p>
+                          </div>
+                              <div class="card mix bantara">
                                 <img src="assets/PelantikanBantara/gambar1.jpg" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">Pelantikan Bantara</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-
-                              <div class="slide">
-                                <img src="assets/PelantikandanMusyawarah/gambar.png" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">Pelantikan dan Musyawarah</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-                              <div class="slide">
-                                <img src="assets/PelantikandanMusyawarah/gambar1.jpeg" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">Pelantikan Musyawarah</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-
-                              <div class="slide">
-                                <img src="assets/PTA/gambar.JPG" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">PTA</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-                              <div class="slide">
-                                <img src="assets/PTA/gambar1.JPG" alt="Pelantikan Bantara">
-                                <div class="card__data">
-                                  <span class="card__description">GERAKAN PRAMUKA <br> SMA NEGERI 49 JAKARTA</span>
-                                  <h2 class="card__title">PTA</h2>
-                                  <span class="card__description">09.215/09.216</span>
-                               </div>
-                              </div>
-                            <div class="navigation">
-                                <span class="arrow prev">&#10094;</span>
-                                <span class="arrow next">&#10095;</span>
+                                <p>Gerakan Pramuka<br>SMA NEGERI 49 JAKARTA</p>
+                                <p>09.215/09.216</p>
                             </div>
                           </div>
                     </div>
-                    </div>
-                </div>
             </section>
 
              <!--==================== FOOTER ====================-->
-             <footer class="footer">
-                <p>&copy; GERAKAN PRAMUKA SMA 49 NEGERI JAKARTA.</p>
-              </footer>              
+            <footer class="footer section">
+              <div class="footer__container container">
+                  <div class="footer__content">
+                      <a href="#" class="footer__logo">
+                          <img src="assets/logo2.png" alt="" class="footer__logo-img">
+                          <img src="assets/logo.jpg" alt="" class="footer__logo-img">
+                      </a>
+
+                      <p class="footer__description">GERAKAN PRAMUKA SMA NEGERI 49 JAKARTA <br> 09.215/09.216</p>
+                    </div>
+
+                  <div class="footer__content">
+                    <h3 class="footer__title">HALAMAN KAMI</h3>
+                      <ul class="footer__links">
+                          <li>
+                              <a href="#" class="footer__link">Beranda</a>
+                          </li>
+                          <li>
+                              <a href="#" class="footer__link">Tentang Kami</a>
+                          </li>
+                      </ul>
+                  </div>
+
+                  <div class="footer__content">
+                    <div class="footer__links">
+                      <a href="https://www.facebook.com/share/1BLjHBDPhX/?mibextid=LQQJ4d" target="_blank" class="footer__social-link">
+                          <i class='bx bxl-facebook'></i>
+                          <p>Facebook</p>
+                      </a>
+                      <a href="https://www.instagram.com/invites/contact/?igsh=15wnfkquhyf12&utm_content=65a6r1a" target="_blank" class="footer__social-link">
+                          <i class='bx bxl-instagram-alt'></i>
+                          <p>Instagram</p>
+                      </a>
+                      <a href="https://x.com/officialscout49" target="_blank" class="footer__social-link">
+                          <i class='bx bxl-twitter' ></i>
+                          <p>Twitter</p>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="footer__content">
+                    <div class="footer__links">
+                      <a href="https://youtube.com/@officialpramukasman49" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-youtube'></i>
+                        <p>Youtube</p>
+                    </a>
+                    <a href="https://www.tiktok.com/@officialpramukasman49jkt" target="_blank" class="footer__social-link">
+                      <i class='bx bxl-tiktok'></i>
+                      <p>Tiktok</p>
+                  </a>
+                    </div>
+                  </div>
+              </div>
+
+              <span class="footer__copy">&#169; GERAKAN PRAMUKA SMA 49 NEGERI JAKARTA.</span>
+          </footer>             
         
         <script src="assets/main.js"></script>
+
+        <script src="assets/mixitup.min.js"></script>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="assets/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/swiper-bundle.min.js"></script>
         <script>
-
-                // Mengambil semua elemen slide dan panah
-const slides = document.querySelectorAll('.slide');
-const prevButton = document.querySelector('.arrow.prev');
-const nextButton = document.querySelector('.arrow.next');
-let currentSlide = 0;
-
-// Fungsi untuk mengatur slide aktif
-function changeSlide() {
-  // Menonaktifkan slide yang sedang aktif
-  slides.forEach(slide => slide.classList.remove('active'));
-  // Mengaktifkan slide berdasarkan index currentSlide
-  slides[currentSlide].classList.add('active');
-}
-
-// Fungsi untuk pindah ke slide berikutnya
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % slides.length; // Mengubah ke slide berikutnya
-  changeSlide();
-}
-
-// Fungsi untuk pindah ke slide sebelumnya
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Mengubah ke slide sebelumnya
-  changeSlide();
-}
-
-// Event listener untuk tombol panah kanan (next)
-nextButton.addEventListener('click', nextSlide);
-
-// Event listener untuk tombol panah kiri (prev)
-prevButton.addEventListener('click', prevSlide);
-
-// Menampilkan slide pertama
-changeSlide();
-
-
+      $(document).ready(function(){
+        $('.customer-logos').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover:false,
+            responsive: [{
+                breakpoint: 768,
+                setting: {
+                    slidesToShow:4
+                }
+            }, {
+                breakpoint: 520,
+                setting: {
+                    slidesToShow: 3
+                }
+            }]
+        });
+    });
 
           </script>
     </body>
