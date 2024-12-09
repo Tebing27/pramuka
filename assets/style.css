@@ -613,6 +613,10 @@ button{
   right: 4rem;
 }
 
+.footer__street {
+  margin-top: .5rem;
+}
+
 .footer__img-one:hover,
 .footer__img-two:hover{
   transform: translateY(-.5rem);
