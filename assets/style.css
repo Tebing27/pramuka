@@ -124,7 +124,7 @@ button{
 }
 
 .main{
-  overflow: hidden; /*For animation*/
+  overflow: hidden;
 }
 
 /*=============== HEADER ===============*/
@@ -153,7 +153,7 @@ button{
 }
 
 .nav__logo-img{
-  width: 1.25rem;
+  width: 2rem;
 }
 
 .nav__link,
@@ -228,27 +228,26 @@ button{
 }
 
 .home {
+  position: relative;
   width: 100%;
-  height: 100vh; 
-  background: url('IMG_9473.JPG') no-repeat center center/cover;
+  height: 100vh;
   display: flex;
-  object-fit: cover;
-  background-position: center;
   align-items: center;
   justify-content: center;
   background-color: #000;
+  overflow: hidden; 
 }
 
-.home::before {
-  content: '';
+.home__background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  /* object-fit: contain; */
   background: var(--body-color); 
-  opacity: .4;
-  z-index: 1; 
+  opacity: .5;
+  z-index: 1;
 }
 
 .home__content {
@@ -262,6 +261,7 @@ button{
   font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
   margin-bottom: var(--mb-1);
+  color: white;
 }
 
 .home__description{
