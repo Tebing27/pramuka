@@ -835,6 +835,52 @@ button{
 
 }
 
+@media screen and (max-width: 360px) {
+  .home__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home__buttons{
+    flex-direction: column;
+    width: max-content;
+    row-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home__buttons{
+    flex-direction: column;
+    width: max-content;
+    row-gap: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 428px) {
+  .home__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home__buttons{
+    flex-direction: column;
+    width: max-content;
+    row-gap: 1rem;
+  }
+}
+
 /* For medium devices */
 @media screen and (min-width: 576px){
   .nav__menu {
